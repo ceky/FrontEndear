@@ -1,0 +1,7 @@
+<nav>
+	<ul class="nav {{include.navclass}} ">
+		<li><a class="{% if page.path == 'index.html' or page.path contains 'life' %}current{% endif %}" href="{{site.baseurl}}/index/">Blog</a></li>
+		<li><a class="{% if page.path contains 'links' %}current{% endif %}" href="{{site.baseurl}}/links/">Links</a></li>
+		<li><a class="{% if page.path contains 'about' %}current{% endif %}" href="{{site.baseurl}}/about/">About</a></li>
+	</ul>
+</nav>

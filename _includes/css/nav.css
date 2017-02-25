@@ -1,0 +1,13 @@
+.nav {
+	margin: 0;
+	padding: 0;
+	line-style-type: none;
+}
+
+.nav > li {
+	display: inline-block;
+}
+
+.nav-top {
+	font-size: 18px;
+}

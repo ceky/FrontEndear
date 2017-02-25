@@ -1,0 +1,9 @@
+<ul>
+	{% for page in site.pages%}
+		{% if page.type == include.type %}
+			<li>
+				{{page.title}}	
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

@@ -1,0 +1,4 @@
+markdown: redcarpet
+baseUrl: /FrontEndear
+exclude: ['README.md']
+permalink: pretty
