@@ -1,0 +1,14 @@
+---
+layout: default
+title: Life
+---
+
+<h1>Life</h1>
+
+<ul>
+	{% for post in site.categories['life']%}
+		<li class="post--link">
+			<a href="{{site.baseurl}}{{post.url}}">{{post.description}}</a>	
+		</li>
+	{% endfor %}
+</ul>
