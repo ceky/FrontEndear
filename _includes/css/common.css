@@ -8,3 +8,10 @@ html {
 	background-color: #000531;
 	color: #fff;
 }
+
+/**
+ post.css
+**/
+.post--link {
+	list-style-type: none;
+}

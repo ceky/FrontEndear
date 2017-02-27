@@ -1,14 +1,20 @@
 ---
-layout: blog
+layout: default
 ---
 
-<h1>Dev</h1>
+<p>Hey, I'm Lucian. I'm a web developer based in Cluj, Romania</p>
 
-<ul>
-	{% for post in site.categories.dev %}
-		<li>
-			<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-			<p>{{post.meta}}</p>
-		</li>
-	{% endfor %}
-</ul>
+<p>Most recent learning:</p>
+<div class="post--link">
+	<a href="{{site.baseurl}}{{site.categories['learning'][0].url}}">{{site.categories['learning'][0].description}}</a>	
+</div>
+
+<p>Most recent bookmark:</p>
+<div class="post--link">
+	<a href="{{site.baseurl}}{{site.categories['links'][0].url}}">{{site.categories['links'][0].description}}</a>	
+</div>
+
+<p>Most recent experience:</p>
+<div class="post--link">
+	<a href="{{site.baseurl}}{{site.categories['life'][0].url}}">{{site.categories['life'][0].description}}</a>	
+</div>
