@@ -1,17 +1,22 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>{% if page.title%}{{page.title}} - {% endif %}Frontendear</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
 		<link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
-			{% include nav.html navclass='nav-top' %}
+			{% include header.html %}
 		</header>
 		
 		{{content}}
 
 		<footer>
-			<p>FrontEndear, 2017</p>
+			{% include footer.html %}
 		</footer>
 	</body>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Classes in javascript - Frontendear</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">FrontEndear</a>
+	</h3>
+	<ul class="nav--menu-container  ">
+		<li>
+			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
+
+		</header>
+		
+		<article class="article--container">
+	<div class="article--date-container">
+		<h5 class="article--date">
+	        <time datetime="2016-03-15T00:00:00+02:00">
+	          	15 March 2016
+	        </time>
+	    </h5>
+    </div>
+
+	<h1 class="article--title">Classes in javascript</h1>
+
+	<p>ES2015 classes offer a much nicer syntax than the previous version where we had to use objects and prototypes to achieve the same results.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Chocolate</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">class</span> <span class="nx">DarkChocolate</span> <span class="kr">extends</span> <span class="nx">Chocolate</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cocoaPercentage</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cocoaPercentage</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">cocoaPercentage</span> <span class="o">=</span> <span class="nx">cocoaPercentage</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kr">super</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s1">' with '</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">cocoaPercentage</span> <span class="o">+</span> <span class="s1">'% cocoa'</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kr">static</span> <span class="nx">getTaste</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s1">'bittersweet'</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">chocolate</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DarkChocolate</span><span class="p">(</span><span class="s1">'Lindt'</span><span class="p">,</span> <span class="mi">80</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">chocolate</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>  <span class="c1">// -&gt; 'Lindt with 80% cocoa'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">DarkChocolate</span><span class="p">.</span><span class="nx">getTaste</span><span class="p">());</span>  <span class="c1">// -&gt; 'bittersweet'</span></code></pre></figure>
+
+<p>We still set properties through the <code class="highlighter-rouge">this.property</code>, but defining methods on the class is done differently, not containing the function keyword.</p>
+
+<p><strong>Static</strong> methods are called without instantiating their class and cannot be called through a class instance.</p>
+
+<p>The <strong>extends</strong> keyword is used to create a class as a child of another class.</p>
+
+<p>If there is a constructor present in a sub-class, it needs to first call <strong>super()</strong> before using “this”. The super keyword is used to call functions on an object’s parent.</p>
+
+
+	<div>
+		 
+			<a class="tag" href="/tags/index.html#OOP">#OOP</a>
+		 
+			<a class="tag" href="/tags/index.html#javascript">#javascript</a>
+		 
+			<a class="tag" href="/tags/index.html#ES2015">#ES2015</a>
+		
+	</div>
+</article>
+
+		<footer>
+			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>

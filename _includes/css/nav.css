@@ -1,9 +1,43 @@
-.nav {
-	margin: 0;
-	padding: 0;
-	line-style-type: none;
+header {
+    border-bottom: 1px solid var(--lightest-grey);
 }
 
-.nav > li {
+.nav {
+	max-width: 55em;
+    margin: 0 auto;
+}
+
+.nav--menu-container {
+	margin: 0;
+	padding: 0;
 	display: inline-block;
+	float: right;
+    margin-top: 1.9em;
+}
+
+.nav--menu-container > li {
+	display: inline-block;
+	margin-left: 1.5em;
+}
+
+.nav--brand-container {
+	display: inline-block;
+}
+
+.nav--brand-link {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.nav--menu-item {
+	padding-top: 2em;
+    padding-bottom: 0.3em;
+}
+
+.nav--menu--selected {
+	border-bottom: 2px solid var(--light-green);
+}
+
+.nav--menu--selected:hover {
+	border-bottom: 2px solid var(--dark-green);
 }

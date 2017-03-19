@@ -1,32 +1,66 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Life - Frontendear</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
 		<link href="/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<header>
-			<nav>
-	<a class="" href="/">FrontEndear</a>
-	<ul class="nav nav-top ">
-		<li><a class="" href="/learning/">Learning</a></li>
-		<li><a class="" href="/links/">Links</a></li>
-		<li><a class="current" href="/life/">Life</a></li>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">FrontEndear</a>
+	</h3>
+	<ul class="nav--menu-container  ">
+		<li>
+			<a class="nav--menu-item " href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item nav--menu--selected" href="/life/">Life</a>
+		</li>
 	</ul>
 </nav>
+
 		</header>
 		
-		<h1>Life</h1>
+		<div class="post--container">
+	<h1>Life</h1>
 
-<ul>
 	
-		<li class="post--link">
-			<a href="/life/2016/02/28/first-marathon/">My experience running a marathon for the first time</a>	
-		</li>
+		<article class="post--article">
+			<a href="/life/2016/02/28/first-marathon/">
+				<h2 class="post--title">My first marathon</h2>
+			</a>
+			
+		    <time class="post--time" datetime="28 Feb 2016">
+		        <span class="day">
+		            28
+		        </span>
+		        <span class="month-year">
+		            February 2016
+		        </span>
+		    </time>
+			
+			<div class="post--description">My experience running a marathon for the first time</div>
+
+			<div>
+				
+			</div>
+		</article>
 	
-</ul>
+
+</div>
+
+<div class="post--pagination">1 of 1</div>
 
 		<footer>
-			<p>FrontEndear, 2017</p>
+			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
 		</footer>
 	</body>
 </html>

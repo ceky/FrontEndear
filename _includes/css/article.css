@@ -1,0 +1,29 @@
+.article--container {
+    max-width: 50em;
+    margin: 1em auto 3em;
+}
+
+.article--date-container {
+    text-align: center;
+    border-top: 1px dotted var(--lightest-grey);
+    margin: 4em auto 0em;
+}
+
+.article--date {
+	display: inline-block;
+	color: var(--light-grey);
+	font-size: 1em;
+	background-color: #f9f9f9;
+    position: relative;
+    top: -2.5em;
+    font-weight: normal;
+    font-style: italic;
+    padding: 0 1em;
+    letter-spacing: 0.05em;
+}
+
+.article--title {
+	margin-top: -1em;
+	margin-bottom: 0em;
+	color: var(--light-green);
+}

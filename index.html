@@ -2,19 +2,70 @@
 layout: default
 ---
 
-<p>Hey, I'm Lucian. I'm a web developer based in Cluj, Romania</p>
+<div class="post--container">
+	<h3>Hi, I'm Lucian.</h3>
+	<h3>I'm a web developer. On this blog I'm going to share my coding journey, web related articles that I find interesting and all sort of things that I'm passionate about, like books or running.</h3>
 
-<p>Most recent learning:</p>
-<div class="post--link">
-	<a href="{{site.baseurl}}{{site.categories['learning'][0].url}}">{{site.categories['learning'][0].description}}</a>	
-</div>
+	<div class="home--social-container">
+		<a class="home--icon-container" href="#">
+			<i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+		</a>
+		<a class="home--icon-container" href="#">
+			<i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+		</a>
+		<a class="home--icon-container" href="#">
+			<i class="fa fa-github fa-2x" aria-hidden="true"></i>
+		</a>
+		<a class="home--icon-container" href="#">
+			<i class="fa fa-codepen fa-2x" aria-hidden="true"></i>
+		</a>
+		<a class="home--icon-container" href="#">
+			<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+		</a>
+	</div>
 
-<p>Most recent bookmark:</p>
-<div class="post--link">
-	<a href="{{site.baseurl}}{{site.categories['links'][0].url}}">{{site.categories['links'][0].description}}</a>	
-</div>
-
-<p>Most recent experience:</p>
-<div class="post--link">
-	<a href="{{site.baseurl}}{{site.categories['life'][0].url}}">{{site.categories['life'][0].description}}</a>	
+	<div class="home--latest-container">
+		<div class="home--latest-category">
+			<h4 class="home--latest-title">Most recent learning</h4>
+			<time class="post--time" datetime="{{ site.categories['coding'][0].date | date_to_string }}">
+		        <span class="day">
+		            {{ site.categories['coding'][0].date | date: "%d" }}
+		        </span>
+		        <span class="month-year">
+		            {{ site.categories['coding'][0].date | date: "%B %Y" }}
+		        </span>
+		    </time>
+			<h4>
+				<a href="{{site.baseurl}}{{site.categories['coding'][0].url}}">{{site.categories['coding'][0].description}}</a>
+			</h4>
+		</div>
+		<div class="home--latest-category">
+			<h4 class="home--latest-title">Most recent link</h4>
+			<time class="post--time" datetime="{{ site.categories['links'][0].date | date_to_string }}">
+		        <span class="day">
+		            {{ site.categories['links'][0].date | date: "%d" }}
+		        </span>
+		        <span class="month-year">
+		            {{ site.categories['links'][0].date | date: "%B %Y" }}
+		        </span>
+		    </time>
+			<h4>
+				<a href="{{site.baseurl}}{{site.categories['links'][0].url}}">{{site.categories['links'][0].description}}</a>
+			</h4>
+		</div>
+		<div class="home--latest-category">
+			<h4 class="home--latest-title">Most recent experience</h4>
+			<time class="post--time" datetime="{{ site.categories['life'][0].date | date_to_string }}">
+		        <span class="day">
+		            {{ site.categories['life'][0].date | date: "%d" }}
+		        </span>
+		        <span class="month-year">
+		            {{ site.categories['life'][0].date | date: "%B %Y" }}
+		        </span>
+		    </time>
+			<h4>
+				<a href="{{site.baseurl}}{{site.categories['life'][0].url}}">{{site.categories['life'][0].description}}</a>
+			</h4>
+		</div>
+	</div>
 </div>

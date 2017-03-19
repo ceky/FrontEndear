@@ -1,0 +1,36 @@
+.post--container {
+	margin: 0 auto;
+    max-width: 50em;
+    padding: 1em;
+}
+
+.post--article {
+	border-bottom: 1px solid var(--lightest-grey);
+    border: 1px solid var(--lightest-grey);
+    border-radius: 15px;
+    padding: 1em;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+    margin-bottom: 1em;
+}
+
+.post--title {
+	margin-bottom: 0;
+    margin-top: 0;
+}
+
+.post--time {
+	display: block;
+	font-style: italic;
+    color: var(--light-grey);
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+.post--description {
+	margin-bottom: 1em;
+}
+
+.post--pagination {
+	text-align: center;
+	margin: 2em;
+}

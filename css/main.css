@@ -1,5 +1,17 @@
 ---
 ---
 
+{% include css/normalize.css %}
+{% include css/variables.css %}
+
 {% include css/common.css %}
+
+{% include css/syntax.css %}
+
 {% include css/nav.css %}
+{% include css/footer.css %}
+
+{% include css/article.css %}
+{% include css/home.css %}
+{% include css/posts.css %}
+{% include css/tags.css %}
