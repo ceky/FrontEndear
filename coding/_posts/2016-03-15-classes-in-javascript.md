@@ -1,8 +1,8 @@
 ---
 layout: blog-article
-title: Classes in javascript
+title: Practical javascript&#58; Classes
 description: ES2015 classes are not something really new. Just the syntax is so much better than in the previous version of javascript.
-tags: 
+tags:
 - OOP
 - javascript
 - ES2015

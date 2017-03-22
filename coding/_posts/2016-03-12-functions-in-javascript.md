@@ -1,6 +1,6 @@
 ---
 layout: blog-article
-title: Functions in javascript
+title: Practical javascript&#58; Functions
 description: Functions in javascript. ES5 and ES2015.
 tags: [functions, javascript, ES2015]
 ---
