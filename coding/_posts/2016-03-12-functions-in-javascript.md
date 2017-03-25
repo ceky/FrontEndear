@@ -6,9 +6,9 @@ tags: [functions, javascript, ES2015]
 ---
 
 I will explore the different ways of declaring a functions and some new related features introduced with ES2015.
-## **Function constructor vs. function declaration vs. function expression**
+## Function constructor vs. function declaration vs. function expression
 
-### **Function constructor**
+### Function constructor
 {% highlight javascript %}
 // Create a function that takes two arguments and returns the sum of those arguments
 var sum = new Function('a', 'b', 'console.log(a + b)');
@@ -17,7 +17,7 @@ sum(2, 6);
 
 but having to enclose everything in quotes isn't exactly convenient.
 
-### **Function declaration**
+### Function declaration
 {% highlight javascript %}
 function sum(a, b) {  
    console.log(a + b);
@@ -43,7 +43,7 @@ var sum = function(a, b) {
 }
 {% endhighlight %}
 
-### **Function expression**
+### Function expression
 The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions.
 
 {% highlight javascript %}
@@ -52,7 +52,7 @@ var sum = function(a, b) {
 }
 {% endhighlight %}
 
-## **The arrow function expression (=>)**
+## The arrow function expression (=>) 
 
 Arrow functions are new in ES2015 and they are supported by most of the browsers [http://caniuse.com/#feat=arrow-functions](http://caniuse.com/#feat=arrow-functions){:target="_blank"}. An arrow function expression has a shorter syntax. Also simplifies function scoping and the ```this``` keyword:
 
@@ -103,7 +103,7 @@ obj.b(); // prints undefined, Object window
 obj.c(); // prints 10, Object {...}
 {% endhighlight %}
 
-## **Default parameters**
+##  Default parameters
 Also a new feature in ES2015:
 
 {% highlight javascript %}
@@ -114,7 +114,7 @@ function sum(a, b=2) {
 sum (3);  // returns 5
 {% endhighlight %}
 
-## **Rest parameters**
+##  Rest parameters
 Are another ES2015 feature. If the last named argument of a function is prefixed with ..., it becomes an array whose elements are supplied by the actual arguments passed to the function.
 
 {% highlight javascript %}

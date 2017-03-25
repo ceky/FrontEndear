@@ -40,8 +40,8 @@ console.log(DarkChocolate.getTaste());  // -> 'bittersweet'
 
 We still set properties through the ```this.property```, but defining methods on the class is done differently, not containing the function keyword.
 
-**Static** methods are called without instantiating their class and cannot be called through a class instance.
+ Static  methods are called without instantiating their class and cannot be called through a class instance.
 
-The **extends** keyword is used to create a class as a child of another class.
+The  extends  keyword is used to create a class as a child of another class.
 
-If there is a constructor present in a sub-class, it needs to first call **super()** before using "this". The super keyword is used to call functions on an object's parent.
+If there is a constructor present in a sub-class, it needs to first call  super()  before using "this". The super keyword is used to call functions on an object's parent.

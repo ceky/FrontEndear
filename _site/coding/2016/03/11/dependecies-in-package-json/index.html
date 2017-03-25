@@ -14,7 +14,7 @@
 	<h3 class="nav--brand-container">
 		<a class="nav--brand-link" href="/">FrontEndear</a>
 	</h3>
-	<ul class="nav--menu-container  ">
+	<ul class="nav--menu-container">
 		<li>
 			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
 		</li>
@@ -28,19 +28,21 @@
 </nav>
 
 		</header>
-		
+
 		<article class="article--container">
-	<div class="article--date-container">
-		<h5 class="article--date">
-	        <time datetime="2016-03-11T00:00:00+02:00">
-	          	11 March 2016
-	        </time>
-	    </h5>
-    </div>
+	<div class="article--header">
+		<h1 class="article--title">Dependencies in package.json</h1>
 
-	<h1 class="article--title">Dependencies in package.json</h1>
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2016-03-11T00:00:00+02:00">
+		          	11 March 2016
+		        </time>
+		    </h5>
+	    </div>
+	</div>
 
-	<h2 id="dependencies-vs-devdependencies"><strong>dependencies vs devDependencies</strong></h2>
+	<h2 id="dependencies-vs-devdependencies">dependencies vs devDependencies</h2>
 
 <p>A dependency specifies a package which the project is using. Some examples could be angular, lodash, jquery or bootstrap.</p>
 
@@ -58,7 +60,7 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<h2 id="defining-dependencies"><strong>Defining dependencies</strong></h2>
+<h2 id="defining-dependencies">Defining dependencies</h2>
 
 <p>Dependencies are specified in a simple object that maps a package name to a version range. You can get the package name from <a href="https://www.npmjs.com">www.npmjs.com</a>. Then write in the console:</p>
 
@@ -69,36 +71,36 @@
 
 <p>You can also add the <code class="highlighter-rouge">--save flag</code> to that command to add it to your package.json dependencies, or <code class="highlighter-rouge">--save --save-exact</code> flags if you want that exact version specified in your package.json dependencies.</p>
 
-<h2 id="ways-to-declare-the-version"><strong>Ways to declare the version</strong></h2>
+<h2 id="ways-to-declare-the-version">Ways to declare the version</h2>
 
 <p>A version is composed of three numbers called major, minor and patch.</p>
 
 <p>There are multiple ways to define the version range of the dependency in package.json. Some of the most commons are:</p>
 <ol>
   <li>
-    <p><strong>Simple ranges</strong><br />
+    <p>Simple ranges <br />
 Using less than and greater than or equal to symbols:
 <code class="highlighter-rouge">'react': '&gt;=15.0.0 &lt;=16.0.0'</code></p>
   </li>
   <li>
-    <p><strong>Hyphen ranges</strong><br />
+    <p>Hyphen ranges <br />
 Defining <code class="highlighter-rouge">'react': '1.2 - 2.3.4'</code> means &gt;=1.2.0 and &lt;=2.3.4</p>
   </li>
   <li>
-    <p><strong>X-Ranges</strong><br />
+    <p>X-Ranges <br />
 Any of X, x, or * may be used to replace one of the numeric values in the [major, minor, patch] tuple.<br />
 So <code class="highlighter-rouge">'react': '1.x'</code> is &gt;=1.0.0 &lt;2.0.0<br />
 And <code class="highlighter-rouge">'react': '1.2.x'</code> is &gt;=1.2.0 &lt;1.3.0</p>
   </li>
   <li>
-    <p><strong>Tilde ranges</strong><br />
+    <p>Tilde ranges <br />
 Allows patch-level changes if a minor version is specified on the comparator. Allows minor-level changes if not.<br />
 So <code class="highlighter-rouge">'react': '~1.2'</code> is &gt;=1.2.0 &lt;1.3.0 (Same as 1.2.x)<br />
 And <code class="highlighter-rouge">'react': '~1'</code> is &gt;=1.0.0 &lt;2.0.0 (Same as 1.x)<br />
 And <code class="highlighter-rouge">'react': '~0.2.3'</code> is &gt;=0.2.3 &lt;0.3.0</p>
   </li>
   <li>
-    <p><strong>Caret ranges</strong><br />
+    <p>Caret ranges <br />
 Allows changes that do not modify the left-most non-zero digit in the [major, minor, patch] tuple<br />
 So <code class="highlighter-rouge">'react': '^1.2.3'</code> is &gt;=1.2.3 &lt;2.0.0<br />
 And <code class="highlighter-rouge">'react': '^0.2.3'</code> is &gt;=0.2.3 &lt;0.3.0</p>
@@ -112,15 +114,22 @@ And <code class="highlighter-rouge">'react': '^0.2.3'</code> is &gt;=0.2.3 &lt;0
 
 
 	<div>
-		 
-			<a class="tag" href="/tags/index.html#dependencies">#dependencies</a>
-		 
-			<a class="tag" href="/tags/index.html#javascript">#javascript</a>
-		 
-			<a class="tag" href="/tags/index.html#npm">#npm</a>
+		
+			<a class="tag" href="/tags/index.html#dependencies">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> dependencies
+			</a>
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#npm">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> npm
+			</a>
 		
 	</div>
 </article>
+
 
 		<footer>
 			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>

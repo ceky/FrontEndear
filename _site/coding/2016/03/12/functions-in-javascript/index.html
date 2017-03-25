@@ -14,7 +14,7 @@
 	<h3 class="nav--brand-container">
 		<a class="nav--brand-link" href="/">FrontEndear</a>
 	</h3>
-	<ul class="nav--menu-container  ">
+	<ul class="nav--menu-container">
 		<li>
 			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
 		</li>
@@ -28,22 +28,24 @@
 </nav>
 
 		</header>
-		
-		<article class="article--container">
-	<div class="article--date-container">
-		<h5 class="article--date">
-	        <time datetime="2016-03-12T00:00:00+02:00">
-	          	12 March 2016
-	        </time>
-	    </h5>
-    </div>
 
-	<h1 class="article--title">Practical javascript&#58; Functions</h1>
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Practical javascript&#58; Functions</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2016-03-12T00:00:00+02:00">
+		          	12 March 2016
+		        </time>
+		    </h5>
+	    </div>
+	</div>
 
 	<p>I will explore the different ways of declaring a functions and some new related features introduced with ES2015.</p>
-<h2 id="function-constructor-vs-function-declaration-vs-function-expression"><strong>Function constructor vs. function declaration vs. function expression</strong></h2>
+<h2 id="function-constructor-vs-function-declaration-vs-function-expression">Function constructor vs. function declaration vs. function expression</h2>
 
-<h3 id="function-constructor"><strong>Function constructor</strong></h3>
+<h3 id="function-constructor">Function constructor</h3>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Create a function that takes two arguments and returns the sum of those arguments</span>
 <span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'console.log(a + b)'</span><span class="p">);</span>
@@ -51,7 +53,7 @@
 
 <p>but having to enclose everything in quotes isn’t exactly convenient.</p>
 
-<h3 id="function-declaration"><strong>Function declaration</strong></h3>
+<h3 id="function-declaration">Function declaration</h3>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>  
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
@@ -73,14 +75,14 @@
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<h3 id="function-expression"><strong>Function expression</strong></h3>
+<h3 id="function-expression">Function expression</h3>
 <p>The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>  
    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<h2 id="the-arrow-function-expression-"><strong>The arrow function expression (=&gt;)</strong></h2>
+<h2 id="the-arrow-function-expression-">The arrow function expression (=&gt;)</h2>
 
 <p>Arrow functions are new in ES2015 and they are supported by most of the browsers <a href="http://caniuse.com/#feat=arrow-functions" target="_blank">http://caniuse.com/#feat=arrow-functions</a>. An arrow function expression has a shorter syntax. Also simplifies function scoping and the <code class="highlighter-rouge">this</code> keyword:</p>
 
@@ -123,7 +125,7 @@
 <span class="nx">obj</span><span class="p">.</span><span class="nx">b</span><span class="p">();</span> <span class="c1">// prints undefined, Object window</span>
 <span class="nx">obj</span><span class="p">.</span><span class="nx">c</span><span class="p">();</span> <span class="c1">// prints 10, Object {...}</span></code></pre></figure>
 
-<h2 id="default-parameters"><strong>Default parameters</strong></h2>
+<h2 id="default-parameters">Default parameters</h2>
 <p>Also a new feature in ES2015:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>  
@@ -132,7 +134,7 @@
 
 <span class="nx">sum</span> <span class="p">(</span><span class="mi">3</span><span class="p">);</span>  <span class="c1">// returns 5</span></code></pre></figure>
 
-<h2 id="rest-parameters"><strong>Rest parameters</strong></h2>
+<h2 id="rest-parameters">Rest parameters</h2>
 <p>Are another ES2015 feature. If the last named argument of a function is prefixed with …, it becomes an array whose elements are supplied by the actual arguments passed to the function.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">fun1</span><span class="p">(...</span><span class="nx">theArgs</span><span class="p">)</span> <span class="p">{</span>
@@ -145,15 +147,22 @@
 
 
 	<div>
-		 
-			<a class="tag" href="/tags/index.html#functions">#functions</a>
-		 
-			<a class="tag" href="/tags/index.html#javascript">#javascript</a>
-		 
-			<a class="tag" href="/tags/index.html#ES2015">#ES2015</a>
+		
+			<a class="tag" href="/tags/index.html#functions">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> functions
+			</a>
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#ES2015">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> ES2015
+			</a>
 		
 	</div>
 </article>
+
 
 		<footer>
 			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>

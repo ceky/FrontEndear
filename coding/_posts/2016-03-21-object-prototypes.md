@@ -7,9 +7,9 @@ tags:
 - prototype
 ---
 
-## **Prototype**
+## Prototype
 
-Each object has an internal link to another object called its **prototype**. For example, the ```toString()``` method is defined on the generic Object prototype, but it can be accessed from any object as if it were an own property.
+Each object has an internal link to another object called its  prototype . For example, the ```toString()``` method is defined on the generic Object prototype, but it can be accessed from any object as if it were an own property.
 
 {% highlight javascript %}
 var empty = {};
@@ -18,9 +18,9 @@ console.log(empty.toString()); // -> [object Object]
 
 When we try to access a property or function of an object that it doesn't have, like in our case above, it's prototype will be searched for that property. And the the prototype's prototype, and so on. Until an object is reached with ```null``` as it's prototype.
 
-## **Methods defined in constructor vs prototype**
+## Methods defined in constructor vs prototype 
 
-**Methods defined in constructor**
+ Methods defined in constructor
 
 {% highlight javascript %}
 function Person(name) {
@@ -35,7 +35,7 @@ person.getName(); // -> 'Nick'
 console.log(person); // -> Person{ getName(), name: 'Nick', __proto__: {...} }
 {% endhighlight %}
 
-**Methods defined in prototype**
+ Methods defined in prototype
 
 {% highlight javascript %}
 function Person(name) {

@@ -3,8 +3,8 @@ html {
 	padding: 0;
 	font-size: 16px;
 	font-family: 'Source Sans Pro', sans-serif;
-	background-color: #ffffff;
-    background-image: url(clean-textile.png);
+	background-color: var(--background-color);
+	color: #333333;
 }
 
 body {

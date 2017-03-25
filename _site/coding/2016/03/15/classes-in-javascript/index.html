@@ -14,7 +14,7 @@
 	<h3 class="nav--brand-container">
 		<a class="nav--brand-link" href="/">FrontEndear</a>
 	</h3>
-	<ul class="nav--menu-container  ">
+	<ul class="nav--menu-container">
 		<li>
 			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
 		</li>
@@ -28,17 +28,19 @@
 </nav>
 
 		</header>
-		
-		<article class="article--container">
-	<div class="article--date-container">
-		<h5 class="article--date">
-	        <time datetime="2016-03-15T00:00:00+02:00">
-	          	15 March 2016
-	        </time>
-	    </h5>
-    </div>
 
-	<h1 class="article--title">Practical javascript&#58; Classes</h1>
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Practical javascript&#58; Classes</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2016-03-15T00:00:00+02:00">
+		          	15 March 2016
+		        </time>
+		    </h5>
+	    </div>
+	</div>
 
 	<p>ES2015 classes offer a much nicer syntax than the previous version where we had to use objects and prototypes to achieve the same results.</p>
 
@@ -70,23 +72,30 @@
 
 <p>We still set properties through the <code class="highlighter-rouge">this.property</code>, but defining methods on the class is done differently, not containing the function keyword.</p>
 
-<p><strong>Static</strong> methods are called without instantiating their class and cannot be called through a class instance.</p>
+<p>Static  methods are called without instantiating their class and cannot be called through a class instance.</p>
 
-<p>The <strong>extends</strong> keyword is used to create a class as a child of another class.</p>
+<p>The  extends  keyword is used to create a class as a child of another class.</p>
 
-<p>If there is a constructor present in a sub-class, it needs to first call <strong>super()</strong> before using “this”. The super keyword is used to call functions on an object’s parent.</p>
+<p>If there is a constructor present in a sub-class, it needs to first call  super()  before using “this”. The super keyword is used to call functions on an object’s parent.</p>
 
 
 	<div>
-		 
-			<a class="tag" href="/tags/index.html#OOP">#OOP</a>
-		 
-			<a class="tag" href="/tags/index.html#javascript">#javascript</a>
-		 
-			<a class="tag" href="/tags/index.html#ES2015">#ES2015</a>
+		
+			<a class="tag" href="/tags/index.html#OOP">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> OOP
+			</a>
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#ES2015">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> ES2015
+			</a>
 		
 	</div>
 </article>
+
 
 		<footer>
 			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>

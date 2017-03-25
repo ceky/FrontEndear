@@ -14,7 +14,7 @@
 	<h3 class="nav--brand-container">
 		<a class="nav--brand-link" href="/">FrontEndear</a>
 	</h3>
-	<ul class="nav--menu-container  ">
+	<ul class="nav--menu-container">
 		<li>
 			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
 		</li>
@@ -28,30 +28,32 @@
 </nav>
 
 		</header>
-		
+
 		<article class="article--container">
-	<div class="article--date-container">
-		<h5 class="article--date">
-	        <time datetime="2016-03-21T00:00:00+02:00">
-	          	21 March 2016
-	        </time>
-	    </h5>
-    </div>
+	<div class="article--header">
+		<h1 class="article--title">Practical javascript&#58; Object prototypes</h1>
 
-	<h1 class="article--title">Practical javascript&#58; Object prototypes</h1>
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2016-03-21T00:00:00+02:00">
+		          	21 March 2016
+		        </time>
+		    </h5>
+	    </div>
+	</div>
 
-	<h2 id="prototype"><strong>Prototype</strong></h2>
+	<h2 id="prototype">Prototype</h2>
 
-<p>Each object has an internal link to another object called its <strong>prototype</strong>. For example, the <code class="highlighter-rouge">toString()</code> method is defined on the generic Object prototype, but it can be accessed from any object as if it were an own property.</p>
+<p>Each object has an internal link to another object called its  prototype . For example, the <code class="highlighter-rouge">toString()</code> method is defined on the generic Object prototype, but it can be accessed from any object as if it were an own property.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">empty</span> <span class="o">=</span> <span class="p">{};</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">empty</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span> <span class="c1">// -&gt; [object Object]</span></code></pre></figure>
 
 <p>When we try to access a property or function of an object that it doesn’t have, like in our case above, it’s prototype will be searched for that property. And the the prototype’s prototype, and so on. Until an object is reached with <code class="highlighter-rouge">null</code> as it’s prototype.</p>
 
-<h2 id="methods-defined-in-constructor-vs-prototype"><strong>Methods defined in constructor vs prototype</strong></h2>
+<h2 id="methods-defined-in-constructor-vs-prototype">Methods defined in constructor vs prototype</h2>
 
-<p><strong>Methods defined in constructor</strong></p>
+<p>Methods defined in constructor</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
@@ -64,7 +66,7 @@
 <span class="nx">person</span><span class="p">.</span><span class="nx">getName</span><span class="p">();</span> <span class="c1">// -&gt; 'Nick'</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">person</span><span class="p">);</span> <span class="c1">// -&gt; Person{ getName(), name: 'Nick', __proto__: {...} }</span></code></pre></figure>
 
-<p><strong>Methods defined in prototype</strong></p>
+<p>Methods defined in prototype</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
@@ -140,13 +142,18 @@
 
 
 	<div>
-		 
-			<a class="tag" href="/tags/index.html#javascript">#javascript</a>
-		 
-			<a class="tag" href="/tags/index.html#prototype">#prototype</a>
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#prototype">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> prototype
+			</a>
 		
 	</div>
 </article>
+
 
 		<footer>
 			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>

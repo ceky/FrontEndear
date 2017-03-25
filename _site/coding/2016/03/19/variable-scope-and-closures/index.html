@@ -14,7 +14,7 @@
 	<h3 class="nav--brand-container">
 		<a class="nav--brand-link" href="/">FrontEndear</a>
 	</h3>
-	<ul class="nav--menu-container  ">
+	<ul class="nav--menu-container">
 		<li>
 			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
 		</li>
@@ -28,19 +28,21 @@
 </nav>
 
 		</header>
-		
+
 		<article class="article--container">
-	<div class="article--date-container">
-		<h5 class="article--date">
-	        <time datetime="2016-03-19T00:00:00+02:00">
-	          	19 March 2016
-	        </time>
-	    </h5>
-    </div>
+	<div class="article--header">
+		<h1 class="article--title">Practical javascript&#58; Variable scope</h1>
 
-	<h1 class="article--title">Practical javascript&#58; Variable scope</h1>
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2016-03-19T00:00:00+02:00">
+		          	19 March 2016
+		        </time>
+		    </h5>
+	    </div>
+	</div>
 
-	<h3 id="scopes"><strong>Scopes</strong></h3>
+	<h3 id="scopes">Scopes</h3>
 <p>There are two scopes in the following example. First one is the global scope which defines the <code class="highlighter-rouge">mainBlock</code> variable. And the second scope is defined by the <code class="highlighter-rouge">newBlock()</code> function. So each function creates a new scope. And inside a nested scope we can access parent variables. But not the other way around. From the parent scope we don’t have access to variables defined in child scopes.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mainBlock</span> <span class="o">=</span> <span class="s1">'parent'</span><span class="p">;</span>
@@ -55,7 +57,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mainBlock</span><span class="p">);</span> <span class="c1">// -&gt; 'parent'</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">childBlock</span><span class="p">);</span> <span class="c1">// -&gt; Uncaught ReferenceError: childBlock is not define</span></code></pre></figure>
 
-<h3 id="shadowing"><strong>Shadowing</strong></h3>
+<h3 id="shadowing">Shadowing</h3>
 <p>If we have a variable with the same name in both the parent and the child scope, then access to the parent variable is blocked in the child scope. Changing the variable in the child scope does not affect the variable in the paren scope.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'parent'</span><span class="p">;</span>
@@ -68,7 +70,7 @@
 <span class="nx">innerScope</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// -&gt; 'global'</span></code></pre></figure>
 
-<h3 id="let"><strong>let</strong></h3>
+<h3 id="let">let</h3>
 
 <p>We saw that a function creates a new scope. But what if we need to define a variable that exists only inside a <code class="highlighter-rouge">for</code> block?</p>
 
@@ -108,7 +110,7 @@
     <span class="kd">var</span> <span class="nx">inner</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<h3 id="const"><strong>const</strong></h3>
+<h3 id="const">const</h3>
 
 <p>ES2015 comes with a new way to declare a constant. Using the <code class="highlighter-rouge">const</code> keyword the variable cannot be changed once defined, returning an error if we try to do so. Also <code class="highlighter-rouge">const</code> works like <code class="highlighter-rouge">let</code> in terms of scoping.
 In addition to let, ES6 introduces const, which also creates a block-scoped variable, but whose value is fixed (constant). Any attempt to change that value at a later time results in an error.</p>
@@ -123,13 +125,18 @@ In addition to let, ES6 introduces const, which also creates a block-scoped vari
 
 
 	<div>
-		 
-			<a class="tag" href="/tags/index.html#javascript">#javascript</a>
-		 
-			<a class="tag" href="/tags/index.html#ES2015">#ES2015</a>
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#ES2015">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> ES2015
+			</a>
 		
 	</div>
 </article>
+
 
 		<footer>
 			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
