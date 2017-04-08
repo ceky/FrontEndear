@@ -7,7 +7,7 @@ tags:
 - ES2015
 ---
 
-### Scopes
+## Scopes
 There are two scopes in the following example. First one is the global scope which defines the ```mainBlock``` variable. And the second scope is defined by the ```newBlock()``` function. So each function creates a new scope. And inside a nested scope we can access parent variables. But not the other way around. From the parent scope we don't have access to variables defined in child scopes.
 
 {% highlight javascript %}
@@ -24,7 +24,7 @@ console.log(mainBlock); // -> 'parent'
 console.log(childBlock); // -> Uncaught ReferenceError: childBlock is not define
 {% endhighlight %}
 
-### Shadowing
+## Shadowing
 If we have a variable with the same name in both the parent and the child scope, then access to the parent variable is blocked in the child scope. Changing the variable in the child scope does not affect the variable in the paren scope.
 
 {% highlight javascript %}
@@ -39,7 +39,7 @@ innerScope();
 console.log(x); // -> 'global'
 {% endhighlight %}
 
-### let
+## let
 
 We saw that a function creates a new scope. But what if we need to define a variable that exists only inside a ```for``` block?
 
@@ -87,7 +87,7 @@ if (isAvailable) {
 }
 {% endhighlight %}
 
-### const 
+## const
 
 ES2015 comes with a new way to declare a constant. Using the ```const``` keyword the variable cannot be changed once defined, returning an error if we try to do so. Also ```const``` works like ```let``` in terms of scoping.
 In addition to let, ES6 introduces const, which also creates a block-scoped variable, but whose value is fixed (constant). Any attempt to change that value at a later time results in an error.
