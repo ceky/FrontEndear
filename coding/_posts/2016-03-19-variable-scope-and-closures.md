@@ -36,7 +36,7 @@ function innerScope() {
 }
 
 innerScope();
-console.log(x); // -> 'global'
+console.log(x); // -> 'parent'
 {% endhighlight %}
 
 ## let

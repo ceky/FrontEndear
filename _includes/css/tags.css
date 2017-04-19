@@ -1,7 +1,13 @@
+.tag--container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .tag {
 	color: #ffffff;
     background-color: var(--dark-grey);
     border-radius: 5px;
+	margin-top: 0.1em;
 	margin-right: 2px;
     padding: 1px 7px;
     font-size: 13px;

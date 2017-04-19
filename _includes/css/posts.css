@@ -6,10 +6,15 @@
 
 .post--article {
 	padding: 1em;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-    margin-bottom: 1em;
-    background-color: rgba(255, 255, 255, 0.6);
-	border-radius: 3px;
+}
+
+.post--article::before {
+	content: "";
+	display: block;
+	top: 0;
+	height: 1px;
+	margin-bottom: 1em;
+	background: linear-gradient(to right, transparent, #ccc 25%, #ccc 75%, transparent);
 }
 
 .post--title {

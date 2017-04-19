@@ -15,7 +15,7 @@
 
     <div class="post--description">{{include.post.description}}</div>
 
-    <div>
+    <div class="tag--container">
         {% for tag in include.post.tags %}
             <a class="tag" href="{{site.baseurl}}/tags/index.html#{{tag | strip}}">
                 <i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> {{tag}}
