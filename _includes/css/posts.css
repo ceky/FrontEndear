@@ -4,6 +4,10 @@
     padding: 1em;
 }
 
+.post--article:nth-of-type(1)::before {
+	background: none;
+}
+
 .post--article {
 	padding: 1em;
 }
