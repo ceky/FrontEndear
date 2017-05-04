@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Functional programming in javascript - Frontendear</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#01B1D9">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">FrontEndear</a>
+	</h3>
+	<ul class="nav--menu-container">
+		<li>
+			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
+
+		</header>
+
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Functional programming in javascript</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2017-04-19T00:00:00+03:00">
+		          	19 April 2017
+		        </time>
+		    </h5>
+	    </div>
+	</div>
+
+	<p>Functional programming is a style of coding where you do everything with functions.</p>
+
+<p>First of all functions are values. And they can be assigned to variables just like any other data type in javascript.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="kr">double</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">doubleDuplicate</span> <span class="o">=</span> <span class="kr">double</span><span class="p">;</span>
+<span class="nx">doubleDuplicate</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span> <span class="c1">// -&gt; 10</span></code></pre></figure>
+
+<p>Functions can also be passed into other functions. That is called <strong>composition</strong>. To take one function and put it into another function.</p>
+
+<p>Functions that operate on other functions are called <strong>higher-order functions</strong>. For example a function taking as an input another function, or a function returning other function.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">paint</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">(</span><span class="nx">car</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">color</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">car</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">makeRed</span> <span class="o">=</span> <span class="nx">paint</span><span class="p">(</span><span class="s1">'red'</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">makeRed</span><span class="p">(</span><span class="s1">'ferrari'</span><span class="p">));</span> <span class="c1">// =&gt; red ferrari</span></code></pre></figure>
+
+<h2 id="filter">filter()</h2>
+
+<p><strong>filter()</strong> is a function on the array that accepts another function as it’s argument, that will be used to return a new filtered version of the array.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">teams</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Real Madrid'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'Spain'</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Barcelona'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'Spain'</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Bayern'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'Germany'</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Arsenal'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'England'</span><span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// option 1 - using for loop</span>
+<span class="kd">var</span> <span class="nx">spanishTeams</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">teams</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">teams</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">country</span> <span class="o">===</span> <span class="s1">'Spain'</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">spanishTeams</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">teams</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">spanishTeams</span><span class="p">);</span>
+
+<span class="c1">// option 2 - using functional js</span>
+<span class="kd">var</span> <span class="nx">spanishTeams</span> <span class="o">=</span> <span class="nx">teams</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">team</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">team</span><span class="p">.</span><span class="nx">country</span> <span class="o">===</span> <span class="s1">'Spain'</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">spanishTeams</span><span class="p">);</span></code></pre></figure>
+
+<h2 id="map">map()</h2>
+
+<p><strong>map()</strong> function from the Array object is another example:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">teams</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Real Madrid'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'Spain'</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Barcelona'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'Spain'</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Bayern'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'Germany'</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Arsenal'</span><span class="p">,</span> <span class="na">country</span><span class="p">:</span> <span class="s1">'England'</span><span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// option 1 - using for loop</span>
+<span class="kd">var</span> <span class="nx">allTeamNames</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">teams</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">allTeamNames</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">teams</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allTeamNames</span><span class="p">);</span>
+
+<span class="c1">// option 2 - using functional js</span>
+<span class="kd">var</span> <span class="nx">allTeamNames</span> <span class="o">=</span> <span class="nx">teams</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">team</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">team</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allTeamNames</span><span class="p">);</span></code></pre></figure>
+
+<p>These are just some examples of functional programming in practice, but there’s a lot more to find about the subject. Personally I like coding in javascript using functions where I can and reduce the number of classical iterations to manipulate data. Also using functional programming the code is reduced and easier to read.</p>
+
+
+	<div class="tag--container">
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#functions">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> functions
+			</a>
+		
+	</div>
+</article>
+
+
+		<footer>
+			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>

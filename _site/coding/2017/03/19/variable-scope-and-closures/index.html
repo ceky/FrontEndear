@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Practical javascript&#58; Variable scope - Frontendear</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#01B1D9">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">FrontEndear</a>
+	</h3>
+	<ul class="nav--menu-container">
+		<li>
+			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
+
+		</header>
+
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Practical javascript&#58; Variable scope</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2017-03-19T00:00:00+02:00">
+		          	19 March 2017
+		        </time>
+		    </h5>
+	    </div>
+	</div>
+
+	<h2 id="scopes">Scopes</h2>
+<p>There are two scopes in the following example. First one is the global scope which defines the <code class="highlighter-rouge">mainBlock</code> variable. And the second scope is defined by the <code class="highlighter-rouge">newBlock()</code> function. So each function creates a new scope. And inside a nested scope we can access parent variables. But not the other way around. From the parent scope we don’t have access to variables defined in child scopes.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">mainBlock</span> <span class="o">=</span> <span class="s1">'parent'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">newBlock</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">childBlock</span> <span class="o">=</span> <span class="s1">'child'</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mainBlock</span><span class="p">);</span> <span class="c1">// -&gt; 'parent'</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">childBlock</span><span class="p">);</span> <span class="c1">// -&gt; 'child'</span>
+<span class="p">}</span>
+
+<span class="nx">newBlock</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mainBlock</span><span class="p">);</span> <span class="c1">// -&gt; 'parent'</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">childBlock</span><span class="p">);</span> <span class="c1">// -&gt; Uncaught ReferenceError: childBlock is not define</span></code></pre></figure>
+
+<h2 id="shadowing">Shadowing</h2>
+<p>If we have a variable with the same name in both the parent and the child scope, then access to the parent variable is blocked in the child scope. Changing the variable in the child scope does not affect the variable in the paren scope.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'parent'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">innerScope</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'local'</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// -&gt; 'local'</span>
+<span class="p">}</span>
+
+<span class="nx">innerScope</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// -&gt; 'parent'</span></code></pre></figure>
+
+<h2 id="let">let</h2>
+
+<p>We saw that a function creates a new scope. But what if we need to define a variable that exists only inside a <code class="highlighter-rouge">for</code> block?</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// -&gt; 10</span></code></pre></figure>
+
+<p>or inside an <code class="highlighter-rouge">if</code> block?</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">isAvailable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">isAvailable</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">inner</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">inner</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">inner</span><span class="p">)</span> <span class="c1">// -&gt; false</span></code></pre></figure>
+
+<p>In the two examples above we are using the <code class="highlighter-rouge">i</code> and the <code class="highlighter-rouge">inner</code> variables only inside the for and if statements. But <code class="highlighter-rouge">if</code> and <code class="highlighter-rouge">for</code> do not create a new scope when defining a variable using <code class="highlighter-rouge">var</code>. That’s why you can see those variables output <code class="highlighter-rouge">10</code> and <code class="highlighter-rouge">false</code> when printed outside the scope that we wanted to define them.</p>
+
+<p>The solution to this problem would be using <code class="highlighter-rouge">let</code> instead of <code class="highlighter-rouge">var</code>. The <code class="highlighter-rouge">let</code> keyword was introduced in ES2015. The <code class="highlighter-rouge">let</code> keyword attaches the variable declaration to the scope of whatever block it’s contained in. So now printing the variable outside the <code class="highlighter-rouge">for</code> or <code class="highlighter-rouge">if</code> block will return an error.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// -&gt; ReferenceError</span></code></pre></figure>
+
+<p>Also unlike the variables defined using <code class="highlighter-rouge">var</code>, the declarations made with <code class="highlighter-rouge">let</code> won’t hoist. The variable will exist in the block only after is defined.</p>
+
+<p>However, declarations made with let will not hoist to the entire scope of the block they appear in. Such declarations will not observably “exist” in the block until the declaration statement.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">isAvailable</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">inner</span><span class="p">);</span> <span class="c1">// -&gt; ReferenceError</span>
+    <span class="kd">var</span> <span class="nx">inner</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="const">const</h2>
+
+<p>ES2015 comes with a new way to declare a constant. Using the <code class="highlighter-rouge">const</code> keyword the variable cannot be changed once defined, returning an error if we try to do so. Also <code class="highlighter-rouge">const</code> works like <code class="highlighter-rouge">let</code> in terms of scoping.
+In addition to let, ES6 introduces const, which also creates a block-scoped variable, but whose value is fixed (constant). Any attempt to change that value at a later time results in an error.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">isAvailable</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">inner</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">inner</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// -&gt; Error</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">inner</span><span class="p">);</span> <span class="c1">// -&gt; ReferenceError</span></code></pre></figure>
+
+
+
+	<div class="tag--container">
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#ES2015">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> ES2015
+			</a>
+		
+	</div>
+</article>
+
+
+		<footer>
+			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>
