@@ -7,7 +7,7 @@ title: Links
 	<h1>Links</h1>
 
 	{% for post in site.categories['links']%}
-		{% include post-article.html post=post %}
+		{% include post-article.html post=post category='links' %}
 	{% endfor %}
 
 </div>
