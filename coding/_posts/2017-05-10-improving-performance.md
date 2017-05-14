@@ -14,13 +14,13 @@ Without further ado, here are some things to look for:
 
 ## Tools
 
-[https://www.webpagetest.org](https://www.webpagetest.org/){:target="_blank"}  
+[WebPageTest](https://www.webpagetest.org/){:target="_blank"}  
 It gives you very detailed explanation about how things are loading in the page. I like that you can compare the way two or more websites load and create you can also create a video with the results. It's only working with sites that are live in production. If you want to test site on your machine on deployed on an internal server of the company it won't work. But there are ways to install the tool locally.
 
-[https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/){:target="_blank"}  
+[Google pagespeed insights](https://developers.google.com/speed/pagespeed/insights/){:target="_blank"}  
 Another good tool that gives a rating of your websites and a list of things you can do to improve it.
 
-[https://developers.google.com/web/tools/lighthouse/](https://developers.google.com/web/tools/lighthouse/){:target="_blank"}  
+[Lighthouse](https://developers.google.com/web/tools/lighthouse/){:target="_blank"}  
 A chrome extensions that analysis a page for different things, one of them being the performance.
 
 ## Videos
