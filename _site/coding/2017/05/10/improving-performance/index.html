@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Improving a web page loading time - Frontendear</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#01CB56">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">FrontEndear</a>
+	</h3>
+	<ul class="nav--menu-container">
+		<li>
+			<a class="nav--menu-item nav--menu--selected" href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
+
+		</header>
+
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Improving a web page loading time</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2017-05-10T00:00:00+03:00">
+		          	10 May 2017
+		        </time>
+		    </h5>
+	    </div>
+	</div>
+
+	<p>Recently at my job I had to do an improvement on the page loading time. While I won’t go into details of the results achieved and how I did it, I will however list some articles, videos and tools that helped me. That way I will know next time I will do something similar where to look for. Anyway I learned a lot of things while investigating the performance issues.</p>
+
+<p>Without further ado, here are some things to look for:</p>
+
+<h2 id="tools">Tools</h2>
+
+<p><a href="https://www.webpagetest.org/" target="_blank">https://www.webpagetest.org</a><br />
+It gives you very detailed explanation about how things are loading in the page. I like that you can compare the way two or more websites load and create you can also create a video with the results. It’s only working with sites that are live in production. If you want to test site on your machine on deployed on an internal server of the company it won’t work. But there are ways to install the tool locally.</p>
+
+<p><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">https://developers.google.com/speed/pagespeed/insights/</a><br />
+Another good tool that gives a rating of your websites and a list of things you can do to improve it.</p>
+
+<p><a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">https://developers.google.com/web/tools/lighthouse/</a><br />
+A chrome extensions that analysis a page for different things, one of them being the performance.</p>
+
+<h2 id="videos">Videos</h2>
+<p><a href="https://www.youtube.com/watch?v=PkOBnYxqj3k" target="_blank">Ilya Grigorik: Critical rendering path - Crash course on web performance</a><br />
+This is the best explanation of the critical rendering path that I found.</p>
+
+<p><a href="https://vimeo.com/162956685" target="_blank">Ilya Grigorik: HTTP/2 best practices</a><br />
+HTTP/2 can improve a page load time and in this videos you can find some best practices to use it. One of them being that in HTTP/1 is recommanded to concatenate all the js and css files into one. While in HTTP/2 as more requests can be processed at the same time it is better to have more js and css files. And initially load only the files that are needed to display the page and the load the others.</p>
+
+<p><a href="https://www.youtube.com/watch?v=VzHnudpszmI" target="_blank">Una Kravets: The Joy of Optimizing</a><br />
+If there’s one thing that can drastically improve a page load, then that is the images on the site. In this talk you can find a lot of interesting things about choosing the right format of the image and how to decreaze an image size without loosing it’s quality.</p>
+
+<p><a href="https://channel9.msdn.com/Blogs/msedgedev/nolanlaw-web-perf-crisis" target="_blank">Nolan Lawson: Solving the Web Performance Crisis</a><br />
+Lots of interesting stuff in this presentation. How using babel to transpile ES6 features can increase the code a lot, how tree shaking can hel you get rid of unused code, and more things about server side rendering and lazy loading.</p>
+
+<p><a href="https://www.youtube.com/watch?v=S8B7oYsjBtM" target="_blank">Tim Kadlec: Once more, with feeling</a><br />
+Cool things about using webpagetest and how to show something meaningful to the user something before the content is being loaded.</p>
+
+<h2 id="articles">Articles</h2>
+
+<p><a href="http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html" target="_blank">Daniel Imms: async vs defer attributes</a><br />
+What’s the difference between async and differ and why you should use them to load the scripts in the page.</p>
+
+<p><a href="https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf" target="_blank">Addy Osmani: Preload, Prefetch And Priorities in Chrome</a><br />
+How to use preload and prefetch to load the resources in the page</p>
+
+<p><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/" target="_blank">Smashing Magazine: Front-End Performance Checklist 2017</a><br />
+A huge list about things to look for if you want to achieve better performance.</p>
+
+<h2 id="courses">Courses</h2>
+
+<p><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/" target="_blank">Cameron Pittman, Ilya Grigorik: Website Performance Optimization</a><br />
+Some nice articles about the critical rendering path a free course on Udacity.</p>
+
+<p><a href="https://developers.google.com/web/fundamentals/performance/rendering/" target="_blank">Cameron Pittman, Paul Lewis: Browser Rendering Optimizations</a></p>
+
+<p>I’ve seen lots of videos and articles about performance lately, also Paul Irish has some nice talks and performance audits that you can look for, but the one’s that I’ve listed are some that I enjoyed most and want to have them bookmarked here.</p>
+
+
+	<div class="tag--container">
+		
+			<a class="tag" href="/tags/index.html#javascript">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> javascript
+			</a>
+		
+			<a class="tag" href="/tags/index.html#CSS">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> CSS
+			</a>
+		
+			<a class="tag" href="/tags/index.html#performance">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> performance
+			</a>
+		
+	</div>
+</article>
+
+
+		<footer>
+			<p>FrontEndear - built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>

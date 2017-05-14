@@ -686,6 +686,14 @@ footer {
     justify-content: center;
 }
 
+.home--latest-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
 .home--latest-category {
     flex-grow: 2;
 	width: 15em;
