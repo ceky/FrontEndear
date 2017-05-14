@@ -1,12 +1,14 @@
 ---
 layout: default
 title: Coding
+pagination:
+  enabled: true
+  category: coding
 ---
 
 <div class="post--container">
-	<h1>Coding</h1>
 
-	{% for post in site.categories['coding']%}
+	{% for post in paginator.posts %}
 		{% include post-article.html post=post %}
 	{% endfor %}
 

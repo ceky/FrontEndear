@@ -1,12 +1,14 @@
 ---
 layout: default
 title: Life
+pagination:
+  enabled: true
+  category: life
 ---
 
 <div class="post--container">
-	<h1>Life</h1>
 
-	{% for post in site.categories['life']%}
+	{% for post in paginator.posts %}
 		{% include post-article.html post=post %}
 	{% endfor %}
 
