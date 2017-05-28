@@ -30,6 +30,9 @@ This is the best explanation of the critical rendering path that I found.
 [Ilya Grigorik: HTTP/2 best practices](https://vimeo.com/162956685){:target="_blank"}  
 HTTP/2 can improve a page load time and in this videos you can find some best practices to use it. One of them being that in HTTP/1 is recommanded to concatenate all the js and css files into one. While in HTTP/2 as more requests can be processed at the same time it is better to have more js and css files. And initially load only the files that are needed to display the page and the load the others.
 
+[Patrick Hamann: CSS and the first meaningful paint](https://www.youtube.com/watch?v=4pQ2byAoIX0){:target="_blank"}  
+Using webpagetest, inline critical CSS, preload, server push using HTTP/2
+
 [Una Kravets: The Joy of Optimizing](https://www.youtube.com/watch?v=VzHnudpszmI){:target="_blank"}  
 If there's one thing that can drastically improve a page load, then that is the images on the site. In this talk you can find a lot of interesting things about choosing the right format of the image and how to decreaze an image size without loosing it's quality.
 
