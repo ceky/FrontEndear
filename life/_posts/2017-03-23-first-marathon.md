@@ -1,6 +1,6 @@
 ---
 layout: blog-article
-title: My first marathon
+title: My first marathon preparations
 description: My experience training for a marathon.
 tags:
 - running
