@@ -43,6 +43,6 @@ And was happy to discover:
 - Martin Splitt, what a dude. I've seen he was in my city (Cluj) before and it's going to come again for JSHeroes conference. Since I'm really into performance optimization I was really entertained by this talk
 - Ola Gasidlo, Rosie Campbell and Phil Hawksworth. Haven't seen their talks on Friday since I had to leave earlier. But I'm gonna make sure to view them once they are uploaded on youtube. They were the hosts of the event in these there days and did an awesome job
 
-Notes from the conferences can be found [here](https://github.com/nienkedekker/Front-Trends-2017){:target="_blank"}.
+Notes from the conferences can be found [here](https://github.com/nienkedekker/Front-Trends-2017){:target="_blank"} and [here](https://github.com/verlok/frontTrendsWarsaw2017){:target="_blank"}.
 
 All in all was a really good event, organized very well, that left me curious about some topics I've seen there and I'm looking forward to dig into them soon. Hopefully this event will continue to be organized in the future and I'll be healthy enough to take part once again in the years to come.
