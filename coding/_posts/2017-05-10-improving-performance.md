@@ -42,6 +42,9 @@ Lots of interesting stuff in this presentation. How using babel to transpile ES6
 [Tim Kadlec: Once more, with feeling](https://www.youtube.com/watch?v=S8B7oYsjBtM){:target="_blank"}  
 Cool things about using webpagetest and how to show something meaningful to the user something before the content is being loaded.
 
+[Addy Osmani: The Browser Hackers Guide To Instantly Loading Everything](https://www.youtube.com/watch?v=7vUs5yOuv-o){:target="_blank"}  
+All sort of tips regarding webpagetest, webpack, babel, preload, HTTP/2 and much more.
+
 ## Articles
 
 [Daniel Imms: async vs defer attributes]( http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html){:target="_blank"}  
