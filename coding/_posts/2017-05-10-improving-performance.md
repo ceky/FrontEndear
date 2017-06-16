@@ -34,7 +34,7 @@ HTTP/2 can improve a page load time and in this videos you can find some best pr
 Using webpagetest, inline critical CSS, preload, server push using HTTP/2
 
 [Una Kravets: The Joy of Optimizing](https://www.youtube.com/watch?v=VzHnudpszmI){:target="_blank"}  
-If there's one thing that can drastically improve a page load, then that is the images on the site. In this talk you can find a lot of interesting things about choosing the right format of the image and how to decreaze an image size without loosing it's quality.
+If there's one thing that can drastically improve a page load, then that is the images on the site. In this talk you can find a lot of interesting things about choosing the right format of the image and how to decrease an image size without loosing it's quality.
 
 [Nolan Lawson: Solving the Web Performance Crisis](https://channel9.msdn.com/Blogs/msedgedev/nolanlaw-web-perf-crisis){:target="_blank"}  
 Lots of interesting stuff in this presentation. How using babel to transpile ES6 features can increase the code a lot, how tree shaking can hel you get rid of unused code, and more things about server side rendering and lazy loading.
@@ -44,6 +44,9 @@ Cool things about using webpagetest and how to show something meaningful to the 
 
 [Addy Osmani: The Browser Hackers Guide To Instantly Loading Everything](https://www.youtube.com/watch?v=7vUs5yOuv-o){:target="_blank"}  
 All sort of tips regarding webpagetest, webpack, babel, preload, HTTP/2 and much more.
+
+[Bruce Lawson: Responsive Images The Browser Hackers Guide To Instantly Loading Everything](https://www.youtube.com/watch?v=BHzDvZrUWDU){:target="_blank"}  
+If there's one video about responsive images to watch, then this is the one.
 
 ## Articles
 
@@ -55,6 +58,9 @@ How to use preload and prefetch to load the resources in the page
 
 [Smashing Magazine: Front-End Performance Checklist 2017]( https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/){:target="_blank"}  
 A huge list about things to look for if you want to achieve better performance.
+
+[Philip Walton: Leveraging the Performance Metrics]( https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics){:target="_blank"}  
+Defining the notions of: First Paint(FP), First Contentful Paint(FCP), First Meaningful Paint (FMP) and Time To Interactive(TTI)  
 
 ## Courses
 
