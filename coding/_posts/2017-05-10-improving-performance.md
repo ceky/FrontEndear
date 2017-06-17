@@ -62,6 +62,9 @@ A huge list about things to look for if you want to achieve better performance.
 [Philip Walton: Leveraging the Performance Metrics]( https://developers.google.com/web/updates/2017/06/user-centric-performance-metrics){:target="_blank"}  
 Defining the notions of: First Paint(FP), First Contentful Paint(FCP), First Meaningful Paint (FMP) and Time To Interactive(TTI)  
 
+[Brian Jackson: Resource Hints – What is Preload, Prefetch, and Preconnect?]( https://www.keycdn.com/blog/resource-hints/){:target="_blank"}  
+ Best explanation I found about preload, prefetch and preconnect. Also with a link to Ilya Grigorik's excellent article about preconnect.
+
 ## Courses
 
 [Cameron Pittman, Ilya Grigorik: Website Performance Optimization](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/){:target="_blank"}  
