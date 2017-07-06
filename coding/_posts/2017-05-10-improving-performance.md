@@ -23,6 +23,9 @@ Another good tool that gives a rating of your websites and a list of things you 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse/){:target="_blank"}  
 A chrome extensions that analysis a page for different things, one of them being the performance.
 
+[Lighthouse](https://compressor.io/){:target="_blank"}  
+Compress and optimize images.
+
 ## Videos
 [Ilya Grigorik: Critical rendering path - Crash course on web performance](https://www.youtube.com/watch?v=PkOBnYxqj3k){:target="_blank"}  
 This is the best explanation of the critical rendering path that I found.
