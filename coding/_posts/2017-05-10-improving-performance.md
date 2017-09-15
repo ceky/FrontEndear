@@ -68,6 +68,9 @@ Defining the notions of: First Paint(FP), First Contentful Paint(FCP), First Mea
 [Brian Jackson: Resource Hints – What is Preload, Prefetch, and Preconnect?]( https://www.keycdn.com/blog/resource-hints/){:target="_blank"}  
  Best explanation I found about preload, prefetch and preconnect. Also with a link to Ilya Grigorik's excellent article about preconnect.
 
+ [Vary - Page speed optimization techniques]( https://varvy.com/pagespeed/){:target="_blank"}  
+ List of all the things you can do to improve your webpage speed. Very nice explanation for all the steps.  
+  
 ## Courses
 
 [Cameron Pittman, Ilya Grigorik: Website Performance Optimization](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/){:target="_blank"}  
