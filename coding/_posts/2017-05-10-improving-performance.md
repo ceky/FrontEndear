@@ -51,6 +51,9 @@ All sort of tips regarding webpagetest, webpack, babel, preload, HTTP/2 and much
 [Bruce Lawson: Responsive Images The Browser Hackers Guide To Instantly Loading Everything](https://www.youtube.com/watch?v=BHzDvZrUWDU){:target="_blank"}  
 If there's one video about responsive images to watch, then this is the one.
 
+[Sam Saccone: Planning for Performance](https://www.youtube.com/watch?v=BHzDvZrUWDU){:target="_blank"}  
+Explains how combining HTTP/2 Push with the Service Workers can improve your page load time. Basically with HTTP/2 push the browser receives the critical files for a first paint without requesting them. But if a specifical critical file is cached, then the server shouldn't push that file to the client. And there's where the Service Workers come into play.
+
 ## Articles
 
 [Daniel Imms: async vs defer attributes]( http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html){:target="_blank"}  

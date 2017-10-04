@@ -45,8 +45,8 @@
 
 	<p>ES2015 classes offer a much nicer syntax than the previous version where we had to use objects and prototypes to achieve the same results.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Chocolate</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">class</span> <span class="nx">Chocolate</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="nx">toString</span><span class="p">()</span> <span class="p">{</span>
@@ -54,13 +54,13 @@
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kr">class</span> <span class="nx">DarkChocolate</span> <span class="kr">extends</span> <span class="nx">Chocolate</span> <span class="p">{</span>
-    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cocoaPercentage</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kr">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cocoaPercentage</span><span class="p">);</span>
+<span class="kd">class</span> <span class="nx">DarkChocolate</span> <span class="kd">extends</span> <span class="nx">Chocolate</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cocoaPercentage</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cocoaPercentage</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">cocoaPercentage</span> <span class="o">=</span> <span class="nx">cocoaPercentage</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="nx">toString</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kr">super</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s1">' with '</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">cocoaPercentage</span> <span class="o">+</span> <span class="s1">'% cocoa'</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">super</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="s1">' with '</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">cocoaPercentage</span> <span class="o">+</span> <span class="s1">'% cocoa'</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="kr">static</span> <span class="nx">getTaste</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="s1">'bittersweet'</span><span class="p">;</span>
