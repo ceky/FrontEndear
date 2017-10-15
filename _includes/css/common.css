@@ -41,3 +41,7 @@ a {
 a:hover {
 	color: var(--dark-green);
 }
+
+p {
+	line-height: 1.5;
+}

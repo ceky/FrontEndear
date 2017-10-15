@@ -513,6 +513,9 @@ a:hover {
 	color: var(--dark-green);
 }
 
+p {
+	line-height: 1.5;
+}
 
 .highlighter-rouge {background: #f2f2f2; color: #9f5da3;}
 .highlight  { background: #e4e4e4; margin: 0; }

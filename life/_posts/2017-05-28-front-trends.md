@@ -18,12 +18,18 @@ I had the opportunity to be offered a ticket by the company I work for to go to 
 - Old town was almost completely destroyed in the WW2 but it was rebuild and it looks really good
 - walked a lot in the rest of the city, did some shopping in a mall from the city center
 
+![running](/assets/fronttrends3.jpg)
+
 I liked Warsaw a lot. The Old town and all the city center really looks like amazing, while the rest I found to be pretty similar to the cities from Romania. Some communist building here and there, looking good overall, but still you can see clearly that both countries still have room to develop comparing with some other Western European countries.
+
+![running](/assets/fronttrends1.jpg)
 
 ## Front-Trends
 This was only the second conference I attended. First one being in Bucharest, organized by Adobe, long time ago when I was working with Flash and Flex. So I was pretty excited about the event. I was there with four other colleagues and took part to all the presentations from Wednesday and Thursday and only for the first two from Friday, since I had to return to run in the Carpathian mountains in Romania at a half marathon on Saturday morning.
 
 I really enjoyed the conference. Most of the talks were really good. Few of them were boring. Either because the speakers seemed to not be able to animate the audience by presenting with a good vibe, either I was not really interested by the topics. But that is normal. With so many topics covered, the web development growing like crazy in the last years. So I would say about 70% of the talks got me really engaged in the presentations.
+
+![running](/assets/fronttrends2.jpg)
 
 I knew some of the speakers from youtube, articles, tutorials or podcasts:
 - Una Kravets
