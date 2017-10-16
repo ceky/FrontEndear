@@ -94,10 +94,10 @@
 <p>One common use case for arrow functions is when dealing with promises and callbacks. Without arrow functions, the promise code needs to be written something like this:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// ES5</span>
-<span class="nx">API</span><span class="p">.</span><span class="nx">get</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">self</span><span class="p">.</span><span class="nx">uri</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">API</span><span class="p">.</span><span class="kd">get</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="nb">self</span><span class="p">.</span><span class="nx">uri</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
         <span class="p">});</span>
     <span class="p">});</span>
@@ -106,9 +106,9 @@
 <p>Using an arrow function, the same result can be achieved more concisely and clearly:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// ES2015 (or ES6)</span>
-<span class="nx">API</span><span class="p">.</span><span class="nx">get</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-        <span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">uri</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">API</span><span class="p">.</span><span class="kd">get</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">http</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">uri</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
             <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
         <span class="p">});</span>
     <span class="p">});</span>

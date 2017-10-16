@@ -1,6 +1,6 @@
 ---
 layout: blog-article
-title: contenteditable
+title: Little magic with contenteditable
 description: Edit css live on the page
 tags:
 - CSS

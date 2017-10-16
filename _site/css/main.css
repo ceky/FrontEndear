@@ -462,7 +462,7 @@ template {
 :root{
     --background-color: #F5F5F5;
     --dark-green: #01B1D9;
-    --light-green: #01CB56;
+    --light-green: #0088a7;
     --dark-grey: #212120;
     --light-grey: #696969;
     --lightest-grey: #dedede;
@@ -472,28 +472,30 @@ template {
 html {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'Source Sans Pro', sans-serif;
-	background-color: var(--background-color);
+	background-color: var(--light-green);
 	color: #333333;
 }
 
 body {
-	margin: 0;
+	margin: 10px;
 	padding: 0;
+	background-color: var(--background-color);
+	min-height: calc(100vh - 20px);
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2em;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 1.6em;
 	font-weight: normal;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: normal;
 }
 
@@ -515,6 +517,10 @@ a:hover {
 
 p {
 	line-height: 1.5;
+}
+
+img {
+	width: 100%;
 }
 
 .highlighter-rouge {background: #f2f2f2; color: #9f5da3;}
@@ -595,7 +601,7 @@ header {
 }
 
 .nav--menu-container {
-    margin-top: 1.9em;
+    margin-top: 1.7em;
     padding-left: 0px;
 }
 
@@ -608,7 +614,11 @@ header {
 	margin-right: 1.5em;
 }
 
-@media all and (max-width: 354px) {
+@media all and (max-width: 407px) {
+    .nav {
+        justify-content: center;
+    }
+
     .nav--menu-container {
         margin-top: 0;
     }
@@ -637,7 +647,8 @@ header {
 }
 
 footer {
-	text-align: center;
+    display: flex;
+    justify-content: center;
     border-top: solid 1px var(--lightest-grey);
 }
 

@@ -1,28 +1,30 @@
 html {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'Source Sans Pro', sans-serif;
-	background-color: var(--background-color);
+	background-color: var(--light-green);
 	color: #333333;
 }
 
 body {
-	margin: 0;
+	margin: 10px;
 	padding: 0;
+	background-color: var(--background-color);
+	min-height: calc(100vh - 20px);
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2em;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 1.6em;
 	font-weight: normal;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: normal;
 }
 
@@ -44,4 +46,8 @@ a:hover {
 
 p {
 	line-height: 1.5;
+}
+
+img {
+	width: 100%;
 }
