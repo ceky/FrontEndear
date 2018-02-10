@@ -515,13 +515,15 @@ a:hover {
 	color: var(--dark-green);
 }
 
-p {
+p, li {
 	line-height: 1.5;
 }
 
 img {
-	width: 100%;
+	max-width: 100%;
 }
+
+
 
 .highlighter-rouge {background: #f2f2f2; color: #9f5da3;}
 .highlight  { background: #e4e4e4; margin: 0; }
@@ -601,7 +603,7 @@ header {
 }
 
 .nav--menu-container {
-    margin-top: 1.7em;
+    margin-top: 1.45em;
     padding-left: 0px;
 }
 
@@ -614,7 +616,7 @@ header {
 	margin-right: 1.5em;
 }
 
-@media all and (max-width: 407px) {
+@media all and (max-width: 367px) {
     .nav {
         justify-content: center;
     }
@@ -626,6 +628,7 @@ header {
 
 .nav--brand-container {
     margin-right: 0.5em;
+    margin-left: 0.5em;
 }
 
 .nav--brand-link {

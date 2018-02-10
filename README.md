@@ -1,4 +1,4 @@
-# FrontEndear
+# Articles
 My tiny blog 
 
 jekyll serve --watch --baseurl ""

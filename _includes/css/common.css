@@ -44,10 +44,11 @@ a:hover {
 	color: var(--dark-green);
 }
 
-p {
+p, li {
 	line-height: 1.5;
 }
 
 img {
 	max-width: 100%;
 }
+
