@@ -1,8 +1,36 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Articles</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#0088a7">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">Articles</a>
+	</h3>
+	<ul class="nav--menu-container">
+		<li>
+			<a class="nav--menu-item " href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item " href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
 
-<div class="post--container">
+		</header>
+
+		<div class="post--container">
 	<div class="home--social-container">
 		<a class="home--icon-container" href="mailto:cekyy07@gmail.com" target="_top">
 			<i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
@@ -21,45 +49,52 @@ layout: default
 	<div class="home--latest-container">
 		<div class="home--latest-category">
 			<h4 class="home--latest-title">Most recent learning</h4>
-			<time class="post--time" datetime="{{ site.categories['coding'][0].date | date_to_string }}">
+			<time class="post--time" datetime="12 Oct 2017">
 		        <span class="day">
-		            {{ site.categories['coding'][0].date | date: "%d" }}
+		            12
 		        </span>
 		        <span class="month-year">
-		            {{ site.categories['coding'][0].date | date: "%B %Y" }}
+		            October 2017
 		        </span>
 		    </time>
 			<h4>
-				<a href="{{site.baseurl}}{{site.categories['coding'][0].url}}" class="home--latest-description">{{site.categories['coding'][0].description}}</a>
+				<a href="/coding/2017/10/12/contenteditable/" class="home--latest-description">Edit css live on the page</a>
 			</h4>
 		</div>
 		<div class="home--latest-category">
 			<h4 class="home--latest-title">Most recent link</h4>
-			<time class="post--time" datetime="{{ site.categories['links'][0].date | date_to_string }}">
+			<time class="post--time" datetime="28 Oct 2018">
 		        <span class="day">
-		            {{ site.categories['links'][0].date | date: "%d" }}
+		            28
 		        </span>
 		        <span class="month-year">
-		            {{ site.categories['links'][0].date | date: "%B %Y" }}
+		            October 2018
 		        </span>
 		    </time>
 			<h4>
-				<a href="{{site.categories['links'][0].link}}" target="_blank" class="home--latest-description">{{site.categories['links'][0].description}}</a>
+				<a href="http://tobiasahlin.com/moving-letters/#" target="_blank" class="home--latest-description">Movin letters with style.</a>
 			</h4>
 		</div>
 		<div class="home--latest-category">
 			<h4 class="home--latest-title">Most recent experience</h4>
-			<time class="post--time" datetime="{{ site.categories['life'][0].date | date_to_string }}">
+			<time class="post--time" datetime="28 May 2017">
 		        <span class="day">
-		            {{ site.categories['life'][0].date | date: "%d" }}
+		            28
 		        </span>
 		        <span class="month-year">
-		            {{ site.categories['life'][0].date | date: "%B %Y" }}
+		            May 2017
 		        </span>
 		    </time>
 			<h4>
-				<a href="{{site.baseurl}}{{site.categories['life'][0].url}}" class="home--latest-description">{{site.categories['life'][0].description}}</a>
+				<a href="/life/2017/05/28/front-trends/" class="home--latest-description">My feelings about visiting Poland and attending the Front-Trends Conference.</a>
 			</h4>
 		</div>
 	</div>
 </div>
+
+
+		<footer>
+			<p>Built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>
