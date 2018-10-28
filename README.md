@@ -1,10 +1,15 @@
-# Articles
-My tiny blog 
+# My tiny blog 
+> Implemented using Jekyll
 
+## Build locally
+``` bash
 jekyll serve --watch --baseurl ""
+```
 
 http://localhost:4000/index.html
 
-https://ceky.github.io/FrontEndear/
+# deploy to surge.sh
 
-https://github.com/ceky/FrontEndear
+First run npm run build and then write ```surge``` and add the project path to /dist
+
+http://ceky.surge.sh
