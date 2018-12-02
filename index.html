@@ -20,7 +20,7 @@ layout: default
 
 	<div class="home--latest-container">
 		<div class="home--latest-category">
-			<h4 class="home--latest-title">Most recent learning</h4>
+			<h4 class="home--latest-title">Latest learning</h4>
 			<time class="post--time" datetime="{{ site.categories['coding'][0].date | date_to_string }}">
 		        <span class="day">
 		            {{ site.categories['coding'][0].date | date: "%d" }}
@@ -30,11 +30,11 @@ layout: default
 		        </span>
 		    </time>
 			<h4>
-				<a href="{{site.baseurl}}{{site.categories['coding'][0].url}}" class="home--latest-description">{{site.categories['coding'][0].description}}</a>
+				<a href="{{site.baseurl}}{{site.categories['coding'][0].url}}" class="home--latest-description">{{site.categories['coding'][0].title}}</a>
 			</h4>
 		</div>
 		<div class="home--latest-category">
-			<h4 class="home--latest-title">Most recent link</h4>
+			<h4 class="home--latest-title">Latest link</h4>
 			<time class="post--time" datetime="{{ site.categories['links'][0].date | date_to_string }}">
 		        <span class="day">
 		            {{ site.categories['links'][0].date | date: "%d" }}
@@ -44,11 +44,11 @@ layout: default
 		        </span>
 		    </time>
 			<h4>
-				<a href="{{site.categories['links'][0].link}}" target="_blank" class="home--latest-description">{{site.categories['links'][0].description}}</a>
+				<a href="{{site.categories['links'][0].link}}" target="_blank" class="home--latest-description">{{site.categories['links'][0].title}}</a>
 			</h4>
 		</div>
 		<div class="home--latest-category">
-			<h4 class="home--latest-title">Most recent experience</h4>
+			<h4 class="home--latest-title">Latest experience</h4>
 			<time class="post--time" datetime="{{ site.categories['life'][0].date | date_to_string }}">
 		        <span class="day">
 		            {{ site.categories['life'][0].date | date: "%d" }}
@@ -58,7 +58,7 @@ layout: default
 		        </span>
 		    </time>
 			<h4>
-				<a href="{{site.baseurl}}{{site.categories['life'][0].url}}" class="home--latest-description">{{site.categories['life'][0].description}}</a>
+				<a href="{{site.baseurl}}{{site.categories['life'][0].url}}" class="home--latest-description">{{site.categories['life'][0].title}}</a>
 			</h4>
 		</div>
 	</div>
