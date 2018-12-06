@@ -10,6 +10,6 @@ http://localhost:4000/index.html
 
 # deploy to surge.sh
 
-First run npm run build and then write ```surge``` and add the project path to /_site_
+Write ```surge``` and add the project path to /_site_
 
 http://ceky.surge.sh

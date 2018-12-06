@@ -8,10 +8,10 @@ html {
 }
 
 body {
-	margin: 10px;
+	margin: 6px;
 	padding: 0;
 	background-color: var(--background-color);
-	min-height: calc(100vh - 20px);
+	min-height: calc(100vh - 12px);
 }
 
 h1 {
@@ -38,7 +38,7 @@ h4 {
 a {
 	text-decoration: none;
 	color: var(--light-green);
-	transition: 0.4s;
+	transition: color 0.4s;
 }
 
 a:hover {

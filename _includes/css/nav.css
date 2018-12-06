@@ -57,3 +57,18 @@ header {
 .nav--menu--selected:hover {
 	border-bottom: 2px solid var(--dark-green);
 }
+
+.hvr-underline-from-center {
+    display: inline;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 2px;
+}

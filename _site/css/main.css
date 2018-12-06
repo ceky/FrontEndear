@@ -479,10 +479,10 @@ html {
 }
 
 body {
-	margin: 10px;
+	margin: 6px;
 	padding: 0;
 	background-color: var(--background-color);
-	min-height: calc(100vh - 20px);
+	min-height: calc(100vh - 12px);
 }
 
 h1 {
@@ -509,7 +509,7 @@ h4 {
 a {
 	text-decoration: none;
 	color: var(--light-green);
-	transition: 0.4s;
+	transition: color 0.4s;
 }
 
 a:hover {
@@ -655,6 +655,20 @@ header {
 	border-bottom: 2px solid var(--dark-green);
 }
 
+.hvr-underline-from-center {
+    display: inline;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 2px;
+}
 footer {
     display: flex;
     justify-content: center;
@@ -693,7 +707,7 @@ footer {
 	color: var(--light-green);
 }
 
-.home--icon-container {
+.home--icon-container:not(:last-child) {
     margin-right: 1.5em;
 }
 
