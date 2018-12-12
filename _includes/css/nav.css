@@ -59,12 +59,7 @@ header {
 }
 
 .hvr-underline-from-center:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 51%;
-    right: 51%;
-    bottom: 0;
+    bottom: -2px;
     background: #2098D1;
     height: 2px;
 }
