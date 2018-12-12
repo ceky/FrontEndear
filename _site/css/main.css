@@ -609,7 +609,7 @@ header {
 }
 
 .nav--menu-container {
-    margin-top: 1.45em;
+    margin-top: 1.25em;
     padding-left: 0px;
 }
 
@@ -618,11 +618,7 @@ header {
 	margin-right: 1.5em;
 }
 
-.nav--menu-container > li:not(:last-child) {
-	margin-right: 1.5em;
-}
-
-@media all and (max-width: 367px) {
+@media all and (max-width: 359px) {
     .nav {
         justify-content: center;
     }
