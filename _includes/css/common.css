@@ -10,7 +10,8 @@ html {
 body {
 	margin: 6px;
 	padding: 0;
-	background-color: var(--background-color);
+	/* background-color: var(--background-color);*/
+	background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dust_scratches.png");
 	min-height: calc(100vh - 12px);
 }
 

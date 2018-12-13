@@ -1,7 +1,8 @@
 .post--container {
 	margin: 0 auto;
     max-width: 50em;
-    padding: 1em;
+	padding: 1em;
+	min-height: calc(100vh - 191px);
 }
 
 .post--article:nth-of-type(1)::before {

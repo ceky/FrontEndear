@@ -1,7 +1,7 @@
 ---
 layout: blog-article
 title: Finished Not Perfect
-description: A problem I had to fight with my whole life
+description: A problem I had to fight with my whole life.
 tags:
 - psychology
 - productivity
