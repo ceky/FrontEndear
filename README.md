@@ -1,25 +1,34 @@
-# My tiny blog 
-> Implemented using Jekyll
+# Blog
+A blog implemented in Jekyll.
 
 ## Build locally
 ``` bash
 jekyll serve --watch --baseurl ""
 ```
 
-http://localhost:4000/index.html
+Then open this url: http://localhost:4000/index.html
 
-# deploy to surge.sh
+## Deploy the blog to surge.sh
 
 Write ```surge``` and add the project path to /_site_
 
 http://ceky.surge.sh
 
-# Tools used
+## Tools used
 - Jekyll
-- background pattern
+
+Jekyll being a static site generator is the core of this project
+
+- Background pattern
+
 https://www.toptal.com/designers/subtlepatterns/
-- hover effects
-http://ianlunn.github.io/Hover/
-- icons
+
+- Hover effects
+
+Used for menu animations http://ianlunn.github.io/Hover/
+
+- Icons
+
 https://fontawesome.com
-- CSS grid, CSS variables
+
+- CSS grid and CSS variables
