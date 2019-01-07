@@ -10,7 +10,7 @@ Then open this url: http://localhost:4000/index.html
 
 ## Deploy the blog to surge.sh
 
-Write ```surge``` and add the project path to /_site_
+Write ```surge``` and add the project path to /_site
 
 http://ceky.surge.sh
 
