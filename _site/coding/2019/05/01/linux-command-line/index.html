@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Linux command line - Articles</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#0088a7">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet"/>
+		<link href="/css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">Articles</a>
+	</h3>
+	<ul class="nav--menu-container">
+		<li>
+			<a class="nav--menu-item  hvr-underline-from-center" href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item  hvr-underline-from-center" href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item  hvr-underline-from-center" href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
+
+		</header>
+
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Linux command line</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2019-05-01T00:00:00+03:00">
+		          	01 May 2019
+		        </time>
+		    </h5>
+	    </div>
+	</div>
+
+	<p>A nice youtube playlist that goes over some basic commands can be found <a href="https://www.youtube.com/playlist?list=PLS1QulWo1RIb9WVQGJ_vh-RQusbZgO_As" target="\_blank">here</a>.</p>
+
+<p>The followin are some that I used or learned while watching this:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">clear</span> <span class="c1">// clears the terminal</span></code></pre></figure>
+
+<p>If you want to see what a command is doing or what options can you pass to it. For example for the <code class="highlighter-rouge">cat</code> command:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">cat</span> <span class="o">--</span><span class="nx">help</span> <span class="c1">// works in Windows (git bash)</span>
+<span class="nx">man</span> <span class="nx">cat</span></code></pre></figure>
+
+<p>A common options that can be used with all the commands is <code class="highlighter-rouge">-v</code>. It stands for verbose, explaining things that have happened</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">mv</span> <span class="o">-</span><span class="nx">v</span> <span class="nx">file3</span><span class="p">.</span><span class="nx">txt</span> <span class="nx">dir3</span> <span class="c1">// displays 'file3.txt -&gt; dir3/file3.txt'</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">ls</code> is a Linux shell command that lists directory contents of files and directories. The current directory by default.</p>
+
+<p><code class="highlighter-rouge">cat</code> command is used to display the content of text files and to combine several files to one file. If a file is too big use the <code class="highlighter-rouge">less</code> command to scroll through it. <code class="highlighter-rouge">cat</code> is not changing the content of the file.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">cat</span> <span class="nx">aa</span><span class="p">.</span><span class="nx">txt</span> <span class="nx">bb</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// combines two files</span></code></pre></figure>
+
+<p>I/O Redirection (Input/Output):</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">ls</span> <span class="o">&gt;</span> <span class="nx">text</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// copies the result of the 'ls' command to text.txt</span>
+<span class="nx">ls</span> <span class="o">&gt;&gt;</span> <span class="nx">text</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// copies the result of the 'ls' command to text.txt, appending it to the end, without overwritting the text.txt</span>
+<span class="nx">cat</span> <span class="nx">list1</span><span class="p">.</span><span class="nx">txt</span> <span class="nx">list2</span><span class="p">.</span><span class="nx">txt</span> <span class="o">&gt;</span> <span class="nx">out</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// combining cat and output commands</span></code></pre></figure>
+
+<p>Directory operations:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">mkdir</span> <span class="nx">test</span> <span class="c1">// create directory</span>
+<span class="nx">rmdir</span> <span class="nx">test</span> <span class="c1">// delete directory</span>
+<span class="nx">rm</span> <span class="nx">test</span> <span class="c1">// delete directory and files from the directory</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">cp</code> command is used to copy files.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">cp</span> <span class="nx">existingFile</span><span class="p">.</span><span class="nx">txt</span> <span class="nx">newCopiedFile</span><span class="p">.</span><span class="nx">txt</span>
+<span class="nx">cp</span> <span class="o">-</span><span class="nx">R</span> <span class="nx">directory1</span> <span class="nx">directory3</span> <span class="c1">// copy a directory with files inside</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">mv</code> command is used to move files and directories. Also used to rename a file.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">mv</span> <span class="nx">oldFileName</span><span class="p">.</span><span class="nx">txt</span> <span class="nx">newFileName</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// renamed</span>
+<span class="nx">mv</span> <span class="nx">file3</span><span class="p">.</span><span class="nx">txt</span> <span class="nx">dir1</span> <span class="c1">// copy a file to a directory</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">less</code> command shows the content of a file. Can be used as Pagers to display contents of large files page by page or scroll line by line up and down.
+Use <strong>space</strong> to navigate down page by page. Press <strong>b</strong> to navigate up page by page. Use capital <strong>G</strong> to navigate to the end of the file. Use small <strong>g</strong> to navigate to the top of the file.
+Use <strong>/textToSearch</strong> to find a text. If it appears multiple times in the document pressing <strong>n</strong> will navigate to the next found instance.</p>
+
+<p><code class="highlighter-rouge">touch</code> command is used to create file. That file is by default txt. By touching a file you either create it if it did not exists. Or you update it’s last modification and access times.</p>
+
+<p><code class="highlighter-rouge">watch</code> command runs a script periodically on a specified amount of time.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">watch</span> <span class="o">-</span><span class="nx">n</span> <span class="mi">2</span> <span class="nx">ls</span> <span class="c1">// runs ls command every 2 seconds</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">head</code> and <code class="highlighter-rouge">tail</code> commands shows the first or last n number of lines of a file. By default it’s 10 lines. It’s useful to monitor logs in real time: $ watch tail -n 15 mylogfile.txt. This can also be achieved by using the -f parameter for tail (tail -f file).</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tail</span> <span class="o">-</span><span class="nx">n3</span> <span class="nx">name_of_file</span> <span class="c1">// shows the last 3 lines from the file</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">find</code> command is used to search for file in a directory and it’s subdirectory.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">find</span> <span class="o">/</span><span class="nx">home</span><span class="o">/</span><span class="nx">programming</span> <span class="o">-</span><span class="nx">name</span> <span class="err">\</span><span class="o">*</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// search using a file extension</span>
+<span class="nx">sudo</span> <span class="nx">find</span> <span class="o">/</span> <span class="o">-</span><span class="nx">name</span> <span class="nx">dmesg</span> <span class="c1">// search a file dmesg in the root directory</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">grep</code> command searches inside a file. Use <strong>-i</strong> flag to search for insensitve text (grep -i “options” file.txt).</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">grep</span> <span class="s2">"options"</span> <span class="nx">file</span><span class="p">.</span><span class="nx">txt</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">wc</code> command prints lines, words, charachters counts for each file.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// say we have a file test.txt with the following content: Linux Command Line tutorial</span>
+<span class="nx">wc</span> <span class="nx">test</span><span class="p">.</span><span class="nx">txt</span> <span class="c1">// returns 1 4 25 -&gt; number of lines, words and characters</span></code></pre></figure>
+
+
+
+	<div class="tag--container">
+		
+			<a class="tag" href="/tags/index.html#Linux">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> Linux
+			</a>
+		
+	</div>
+</article>
+
+
+		<footer>
+			<p>Built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>
