@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vim - Articles</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#0088a7">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet"/>
+		<link href="/css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav class="nav">
+	<h3 class="nav--brand-container">
+		<a class="nav--brand-link" href="/">Articles</a>
+	</h3>
+	<ul class="nav--menu-container">
+		<li>
+			<a class="nav--menu-item  hvr-underline-from-center" href="/coding/">Coding</a>
+		</li>
+		<li>
+			<a class="nav--menu-item  hvr-underline-from-center" href="/links/">Links</a>
+		</li>
+		<li>
+			<a class="nav--menu-item  hvr-underline-from-center" href="/life/">Life</a>
+		</li>
+	</ul>
+</nav>
+
+		</header>
+
+		<article class="article--container">
+	<div class="article--header">
+		<h1 class="article--title">Vim</h1>
+
+		<div class="article--date-container">
+			<h5 class="article--date">
+		        <time datetime="2019-05-01T00:00:00+03:00">
+		          	01 May 2019
+		        </time>
+		    </h5>
+	    </div>
+	</div>
+
+	<h3 id="the-basics-of-moving">The Basics of Moving</h3>
+
+<p><code class="highlighter-rouge">h</code> - moves the cursor one character to the left<br />
+<code class="highlighter-rouge">j</code> - moves the cursor down one line<br />
+<code class="highlighter-rouge">k</code> - moves the cursor up one line<br />
+<code class="highlighter-rouge">l</code> - moves the cursor one character to the right<br />
+<code class="highlighter-rouge">0</code> - moves the cursor to the beginning of the line<br />
+<code class="highlighter-rouge">$</code> - moves the cursor to the end of the line<br />
+<code class="highlighter-rouge">w</code> - move forward one word<br />
+<code class="highlighter-rouge">b</code> - move backward one word<br />
+<code class="highlighter-rouge">G</code> - move to the end of the file<br />
+<code class="highlighter-rouge">gg</code> - move to the beginning of the file<br />
+<code class="highlighter-rouge">:100</code> - go to line 100</p>
+
+<h3 id="editing">Editing</h3>
+
+<p><code class="highlighter-rouge">i</code> - go to insert mode<br />
+<code class="highlighter-rouge">esc</code> - go out the insert mode<br />
+<code class="highlighter-rouge">x</code> - will delete the character where the cursor is<br />
+<code class="highlighter-rouge">u</code> - will undo the last operation<br />
+<code class="highlighter-rouge">U</code> - undo all the changes to that line<br />
+<code class="highlighter-rouge">ctrl + r</code> will redo the last undo<br />
+<code class="highlighter-rouge">A</code> - append at the end of line<br />
+<code class="highlighter-rouge">D</code> - delete from cursor to end of line</p>
+
+<h3 id="searching">Searching</h3>
+
+<p><code class="highlighter-rouge">/text</code> - search for text in the document
+<code class="highlighter-rouge">n</code> - move the cursor to the next instance of the text from the last search
+<code class="highlighter-rouge">N</code> - move the cursor to the previous instance of the text from the last search</p>
+
+<h3 id="copying-and-pasting">Copying and Pasting</h3>
+
+<p><code class="highlighter-rouge">v</code> - highlight one character at a time<br />
+<code class="highlighter-rouge">V</code> - highlight one line at a time<br />
+<code class="highlighter-rouge">Ctrl-v</code> - highlight by columns<br />
+<code class="highlighter-rouge">p</code> - paste text after the current line<br />
+<code class="highlighter-rouge">P</code> - paste text on the current line<br />
+<code class="highlighter-rouge">y</code> - copy text into the copy buffer<br />
+<code class="highlighter-rouge">yy</code> - copy whole line<br />
+<code class="highlighter-rouge">shift + v</code> - highlight whole line, move up and down to select multiple lines</p>
+
+<h3 id="saving-and-quitting">Saving and Quitting</h3>
+
+<p><code class="highlighter-rouge">:w</code> - write the file to the existing filename<br />
+<code class="highlighter-rouge">:q!</code> - quit without saving<br />
+<code class="highlighter-rouge">ZZ</code> - save and quit the file<br />
+<code class="highlighter-rouge">:e!</code> - restore all changes since opening of file<br />
+<code class="highlighter-rouge">:sav</code> filename - save as another file<br />
+<code class="highlighter-rouge">ctrl + z</code> - bring editor to background (like a git stash)<br />
+<code class="highlighter-rouge">fg</code> - bring back editor (like a git stash apply)</p>
+
+
+	<div class="tag--container">
+		
+			<a class="tag" href="/tags/index.html#Linux">
+				<i class="fa fa-tags post--tag-icon" aria-hidden="true"></i> Linux
+			</a>
+		
+	</div>
+</article>
+
+
+		<footer>
+			<p>Built with <a class="footer--link" href="https://github.com/ceky/FrontEndear" target="_blank">Jekyll</a></p>
+		</footer>
+	</body>
+</html>
